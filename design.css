@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: grey;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+}
+header {
+    background-color: grey;
+}
+
+.card {
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+}
+
+.h1 {
+    color: #1c2433;
+    margin: 0 0 20px;
+    font-size: 1.75rem;
+    font-family: Arial, Serif(red serifs);
+}
+
+.add {
+ display: flex;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #a7a8a7;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: 2px solid #2f6f5e;
+    border-color: transparent;
+    outline: 2px solid #3b6fd8;
+}
+
+button {
+    padding: 12px 8px;
+    font-size: 1rem;
+    font-weight: 580;
+    color: white;
+    background: black;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.btn:hover {
+    background: black;
+    transform: translateY(1.08);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+ .error {
+    min-height: 1.5em;
+    margin-top: none;
+ }
+
+ .counter {
+    margin: 10px;
+     color: dimgrey;
+     font-size: 0.9em;
+ }
+
+ #tasks {
+    list-style: none;
+     margin-top:15px;
+ }
+
+ #tasks li {
+     display: flex;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     padding: 10px 12px;
+     margin-bottom: 8px;
+     border: 1px solid #dde4ee;
+     border-radius: 8px;
+     overflow-wrap: anywhere;
+ }
+
+.tasks-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-text.done {
+    text-decoration: line-through;
+    color: #8a93a3;
+}
+
+#tasks li button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+#tasks li .delete {
+    background: #0d00ff;
+}
+
+#tasks li .delete:hover {
+    background: #040047;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 16px;
+    }
+
+    .add {
+        flex-direction: column;
+    }
+
+    .add button {
+        width: 100%;
+    }
+
+    #tasks li {
+        flex-wrap: wrap;
+    }
+
+    .task-text {
+        flex-basis: 100%;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
