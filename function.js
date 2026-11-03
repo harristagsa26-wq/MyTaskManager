@@ -12,7 +12,7 @@ function addTask() {
     const text = input.value.trim();
 
     if (text == "") {
-        error.textContent = "Please input a task";
+        error.textContent = "Please input a task!";
         return;
     }
     error.textContent = "";
@@ -37,19 +37,27 @@ function addTask() {
        updateCount();
     });
 
-
         li.append(span, completeBtn, deleteBtn);
         list.appendChild(li);
-
         input.value = "";
         input.focus();
         updateCount();
 
 }
+    const clearBtn = document.createElement("button");
+    clearBtn.className = "clear";
+    clearBtn.textContent = "Clear Task";
+    clearBtn.addEventListener("click", function () {
+    list.innerHTML = "";
+    error.innerHTML = " "
+    updateCount();
+    });
+    addButton.after(clearBtn);
 
     addButton.addEventListener("click", addTask);
 
     input.addEventListener("keydown", function (e) {
         if (e.key == "Enter") addTask();
     });
+
 
